@@ -7,7 +7,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://crud-api-fawn.vercel.app/",
+    origin: "https://crud-api-fawn.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })

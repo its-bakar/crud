@@ -16,7 +16,7 @@ const CreateUser = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8000/createUser", { name, email, age })
+      .post("https://crud-eta-one.vercel.app/createUser", { name, email, age })
       .then((response) => {
         console.log(response);
         navigate("/");

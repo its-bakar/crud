@@ -16,7 +16,7 @@ const UpdateUser = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/getUser/${id}`)
+      .get(`https://crud-eta-one.vercel.app/getUser/${id}`)
       .then((response) => {
         console.log(response);
         setName(response.data.name);
@@ -29,7 +29,11 @@ const UpdateUser = () => {
   const Update = (e) => {
     e.preventDefault();
     axios
-      .put(`http://localhost:8000/updateUser/${id}`, { name, email, age })
+      .put(`https://crud-eta-one.vercel.app/updateUser/${id}`, {
+        name,
+        email,
+        age,
+      })
       .then((response) => {
         console.log(response);
         navigate("/");

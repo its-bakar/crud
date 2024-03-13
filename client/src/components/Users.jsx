@@ -14,14 +14,14 @@ const Users = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000")
+      .get("https://crud-eta-one.vercel.app/")
       .then((response) => setUsers(response.data))
       .catch((err) => console.log(err));
   });
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:8000/deleteUser/${id}`)
+      .delete(`https://crud-eta-one.vercel.app/${id}`)
       .then((response) => {
         setUsers(response.data);
         window.location.reload();

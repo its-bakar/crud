@@ -14,7 +14,7 @@ const Users = () => {
 
   useEffect(() => {
     axios
-      .get("https://crud-eta-one.vercel.app/")
+      .get("https://crud-eta-one.vercel.app")
       .then((response) => setUsers(response.data))
       .catch((err) => console.log(err));
   });

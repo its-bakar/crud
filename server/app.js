@@ -5,7 +5,13 @@ const UserModel = require("./models/users");
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://crud-api-fawn.vercel.app/",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 mongoose.connect("mongodb://localhost:27017/crud").then(() => {
